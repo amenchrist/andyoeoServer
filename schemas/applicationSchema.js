@@ -1,4 +1,7 @@
-const applicationSchema = {
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
+
+const applicationSchema = new Schema ({
     id: Number,
     agent: String,
     applicant: String,
@@ -11,6 +14,6 @@ const applicationSchema = {
     registrationSent: String,
     enrolmentStatus: String,
     interview: String
-}
+})
 
 module.exports = applicationSchema;

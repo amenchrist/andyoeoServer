@@ -1,4 +1,7 @@
-const programmeSchema = {
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
+
+const programmeSchema = new Schema({
     id: Number,
     name: String,
     deliveryPattern: String,
@@ -9,6 +12,6 @@ const programmeSchema = {
     courseFee: String,
     firstYearFee: String,
 
-}
+})
 
 module.exports = programmeSchema;
