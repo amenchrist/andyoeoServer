@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const studentSchema = new Schema ({
-    id: Number,
+    id: String,
     title: String,
     firstName: String,
     lastName: String,
@@ -18,9 +18,9 @@ const studentSchema = new Schema ({
     highestQualification: String,
     lastInstitutionAttended: String,
     currentUKInstitution: String,
-    uniqueLearnerNumber: Number,
+    uniqueLearnerNumber: String,
     nameOfQualification: String,
-    yearAchieved: Number,
+    yearAchieved: String,
     subject: String,
     grade: String,
     passportNo: String,
@@ -28,7 +28,7 @@ const studentSchema = new Schema ({
     timeInPublicCare: String,
     disabilityOrSpecialNeeds: String,
     personalStatement: String,
-    documentIds: [Number],
+    documentIds: [String],
     permHouseNumberOrName: String,
     permStreet: String,
     permCityOrTown: String,
