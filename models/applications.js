@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
 
-const applicationSchema = new Schema ({
+
+const applicationSchema = new mongoose.Schema ({
     id: Number,
     agent: String,
     applicant: String,
@@ -16,4 +16,5 @@ const applicationSchema = new Schema ({
     interview: String
 })
 
-module.exports = applicationSchema;
+
+module.exports = mongoose.model("Application", applicationSchema);
