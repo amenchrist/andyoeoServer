@@ -6,7 +6,7 @@ router.get('/', async (req, res) => {
     let query = {};
     let students = await Student.find(query)
     await console.log(students)
-    await res.send(data);
+    await res.send('Students Reached');
 });
 
 module.exports = router;

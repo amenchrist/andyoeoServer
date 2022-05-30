@@ -17,12 +17,12 @@ db.on('error', error => console.error(error));
 db.once('open', () => console.log('Connected to MongoDB'))
 
 const studentsRouter = require('./routes/students');
-const applicationsRouter = require('./routes/applications');
-const indexRouter = require('./routes/index');
+const applicationsRouter = require('./routes/applicationsRouter');
+const indexRouter = require('./routes/indexRouter');
 
-app.get('/', indexRouter );
-app.get('/students', studentsRouter );
-app.get('/applications', applicationsRouter );
+app.use('/', indexRouter );
+app.use('/students', studentsRouter );
+app.use('/applications', applicationsRouter );
 
 app.listen(PORT, () => console.log(`listening on Port: ${PORT}`));
 
